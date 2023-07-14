@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>mboile home screen</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="mobile">
+    <div class="notificarion-bar">  
+      <div class="digital-clock">
+      <div class="time">
+            <span id="hours">00</span>
+            <span id="dots">:</span>
+            <span id="minutes">00</span>
+            <span id="period">PM</span>
+      </div>
+    </div>
+      <div id="charging">58%</div>
+    </div>
+    <div class="scroll">
+      <div class="main-screen">
+        <div class="main-screen-icon-row">
+          <div class="main-screen-icon">
+            <div class="search-box">
+              <input id="search-bar" type="text" placeholder="G">
+              <button id="search-bar-icon"type="submit"></button>
+              <button id="search-bar-icon"type="submit"></button>
+              </input>
+            </div>
+          </div>   
+          <div class="main-screen-icon">
+            <div class="screen-icon"></div>
+            <div class="screen-icon"></div>
+            <div class="screen-icon"></div>
+            <div class="screen-icon"></div>
+          </div>
+          <div class="main-screen-icon">
+            <div class="screen-icon"></div>
+            <div class="screen-icon"></div>
+            <div class="screen-icon"></div>
+            <div class="screen-icon"></div>
+          </div>
+          <div class="main-screen-icon">
+            <div class="screen-icon"></div>
+            <div class="screen-icon"></div>
+            <div class="screen-icon"></div>
+            <div class="screen-icon"></div>
+          </div>
+          <div class="main-screen-icon">
+            <div class="screen-icon"></div>
+            <div class="screen-icon"></div>
+            <div class="screen-icon"></div>
+            <div class="screen-icon"></div>
+          </div>
+          <div class="main-screen-icon">
+            <div class="screen-icon"></div>
+            <div class="screen-icon"></div>
+            <div class="screen-icon"></div>
+            <div class="screen-icon"></div>
+          </div>
+        </div>
+      </div>
+      <!-- screen two -->
+      <div class="main-screen">
+        
+        <div class="main-screen-icon">
+          <div class="empty-screen-icon"></div>
+          <div class="empty-screen-icon"></div>
+          <div class="empty-screen-icon"></div>
+          <div class="empty-screen-icon"></div>
+        </div>
+
+        <div class="main-screen-icon">
+          <div class="empty-screen-icon"></div>
+          <div class="empty-screen-icon"></div>
+          <div class="empty-screen-icon"></div>
+          <div class="empty-screen-icon"></div>
+        </div>
+        <div class="main-screen-icon">
+          <div class="empty-screen-icon"></div>
+          <div class="empty-screen-icon"></div>
+          <div class="empty-screen-icon"></div>
+          <div class="empty-screen-icon"></div>
+        </div>
+        
+        <div class="main-screen-icon">
+          <div class="empty-screen-icon"></div>
+          <div class="empty-screen-icon"></div>
+          <div class="empty-screen-icon"></div>
+          <div class="empty-screen-icon"></div>
+        </div>
+        
+        <div class="main-screen-icon">
+          <div class="empty-screen-icon"></div>
+          <div class="empty-screen-icon"></div>
+          <div class="empty-screen-icon"></div>
+          <div class="empty-screen-icon"></div>
+        </div>
+        <div class="main-screen-icon">
+        <div class="screen-icon"></div>
+        <div class="screen-icon"></div>
+        <div class="screen-icon"></div>
+        <div class="screen-icon"></div>
+        </div>
+        
+      </div>
+      <!-- screen three -->
+      <div class="main-screen">
+        
+        <div class="main-screen-icon">
+          <div class="empty-screen-icon"></div>
+          <div class="empty-screen-icon"></div>
+          <div class="empty-screen-icon"></div>
+          <div class="empty-screen-icon"></div>
+        </div>
+        <div class="main-screen-icon">
+          <div class="empty-screen-icon"></div>
+          <div class="empty-screen-icon"></div>
+          <div class="empty-screen-icon"></div>
+          <div class="empty-screen-icon"></div>
+        </div>
+        <div class="main-screen-icon">
+          <div class="empty-screen-icon"></div>
+          <div class="empty-screen-icon"></div>
+          <div class="empty-screen-icon"></div>
+          <div class="empty-screen-icon"></div>
+        </div>
+        <div class="main-screen-icon">
+          <div class="empty-screen-icon"></div>
+          <div class="empty-screen-icon"></div>
+          <div class="empty-screen-icon"></div>
+          <div class="empty-screen-icon"></div>
+        </div>
+        <div class="main-screen-icon">
+          <div class="empty-screen-icon"></div>
+          <div class="empty-screen-icon"></div>
+          <div class="empty-screen-icon"></div>
+          <div class="empty-screen-icon"></div>
+        </div>
+        <div class="main-screen-icon">
+        <div class="screen-icon"></div>
+        <div class="screen-icon"></div>
+        <div class="screen-icon"></div>
+        <div class="screen-icon"></div>
+        </div>
+      </div>
+    </div>
+    <div class="fix-icon">
+      <div class="icon"></div>
+      <div class="icon"></div>
+      <div class="icon"></div>
+      <div class="icon"></div>
+      <div class="icon"></div>
+    </div> 
+  </div>
+  <script>
+    function clock(){
+      let hours = document.getElementById('hours');
+      let minutes = document.getElementById('minutes');
+      let secounds = document.getElementById('secounds');
+      let period = document.getElementById('period');
+
+      let h = new Date().getHours();
+      let m = new Date().getMinutes();
+      let s = new Date().getSeconds();
+
+      if( h>12 ){
+        h= h-12;
+      }
+      h = (h<10)? "0"+ h:h;
+      m = (m<10)? "0"+ m:m;
+      s = (s<10)? "0"+ s:s;
+
+      let ampm = h >= 12 ? "PM" :"AM";
+      hours.innerHTML = h;
+      minutes.innerHTML = m;
+      secounds.innerHTML = s;
+      period.innerHTML = ampm;
+
+      
+    }
+    clock();
+    setInterval(clock,1000)
+
+  </script>
+</body>
+</html>
